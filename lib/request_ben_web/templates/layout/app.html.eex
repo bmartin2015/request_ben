@@ -7,19 +7,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello RequestBen!</title>
+    <title>RequestBen - for when Responseb.in isn't working</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
   <body>
     <div class="container">
-      <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
-          </ul>
-        </nav>
-        <span class="logo"></span>
+      <header class="page-header">
+        <h1><a href="/">RequestBen</a> <small>A <a href="https://requestb.in/">RequestBin</a> clone</small></h1> 
       </header>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
@@ -28,6 +23,10 @@
       <main role="main">
         <%= render @view_module, @view_template, assigns %>
       </main>
+
+      <footer>
+        <p>Find my code at <a href="https://github.com/bmartin2015/request_ben">RequestBen</a></p>
+      </footer>
 
     </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
