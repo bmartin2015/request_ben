@@ -1,0 +1,5 @@
+<h2>Edit Bin</h2>
+
+<%= render "form.html", Map.put(assigns, :action, bin_path(@conn, :update, @bin)) %>
+
+<span><%= link "Back", to: bin_path(@conn, :index) %></span>

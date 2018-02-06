@@ -1,0 +1,26 @@
+<h2>Listing Bins</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for bin <- @bins do %>
+    <tr>
+      <td><%= bin.name %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: bin_path(@conn, :show, bin), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: bin_path(@conn, :edit, bin), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: bin_path(@conn, :delete, bin), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Bin", to: bin_path(@conn, :new) %></span>

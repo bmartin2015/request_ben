@@ -18,6 +18,8 @@ defmodule RequestBenWeb.Router do
 
     get "/", PageController, :index
     get "/show", PageController, :show
+
+    resources "/bins", BinController
   end
 
   # Other scopes may use custom stacks.
