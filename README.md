@@ -18,3 +18,12 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Docs: https://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
+
+
+
+## Releases
+mix edeliver build release --increment-version={patch|minor|major}
+mix edeliver build release --set-version=1.3.0-beta.1
+
+mix edeliver build upgrade --from=<git-tag-or-revision>|--with=<release-version-from-store>
+                          [--to=<git-tag-or-revision>] [--branch=<git-branch>]
