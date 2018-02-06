@@ -43,7 +43,8 @@ defmodule RequestBen.Mixfile do
       {:cowboy, "~> 1.0"},
       {:credo, "~> 0.9.0-rc1", only: [:dev, :test], runtime: false},
       {:edeliver, "~> 1.4.5"},
-      {:distillery, "~> 1.5", runtime: false}
+      {:distillery, "~> 1.5", runtime: false},
+      { :uuid, "~> 1.1" } # FOR UUIDs
     ]
   end
 

@@ -14,8 +14,8 @@ defmodule RequestBenWeb.BinController do
     render(conn, "new.html", changeset: changeset)
   end
 
-  def create(conn, %{"bin" => bin_params}) do
-    case Ben.create_bin(bin_params) do
+  def create(conn, _params) do
+    case Ben.create_bin() do
       {:ok, bin} ->
         conn
         |> put_flash(:info, "Bin created successfully.")

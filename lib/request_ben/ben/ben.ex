@@ -51,7 +51,8 @@ defmodule RequestBen.Ben do
   """
   def create_bin(attrs \\ %{}) do
     %Bin{}
-    |> Bin.changeset(attrs)
+    |> generate_id()
+    |> Bin.changeset(%{})
     |> Repo.insert()
   end
 
@@ -100,5 +101,10 @@ defmodule RequestBen.Ben do
   """
   def change_bin(%Bin{} = bin) do
     Bin.changeset(bin, %{})
+  end
+
+
+  defp generate_id(%Bin{} = bin) do
+    %{ bin | name: UUID.uuid4() }
   end
 end
