@@ -1,0 +1,8 @@
+<div class="jumbotron">
+	<p><%= handler_info(@conn) %></p>
+	<hr>
+	<%= for x <- @conn.req_headers do %>
+		<% {k, v} = x %> 
+		<p><%= k %>: <%= v %></p>
+	<% end %>
+</div>
